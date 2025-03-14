@@ -204,7 +204,6 @@ export class FigmaMcpServer {
 
     app.post("/messages", async (req: Request, res: Response) => {
       if (!this.sseTransport) {
-        // @ts-expect-error Not sure why Express types aren't working
         res.sendStatus(400);
         return;
       }
